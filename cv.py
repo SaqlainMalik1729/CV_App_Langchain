@@ -71,7 +71,7 @@ text_splitter, emb_model, model = initialize_langchain()
 # Initialize resume parser
 parser = PydanticOutputParser(pydantic_object=ResumeData)
 prompt = PromptTemplate(
-    template"""You are an expert resume parser. Extract the following information from the provided resume text:
+    template="""You are an expert resume parser. Extract the following information from the provided resume text:
         - Full name
         - Contact details (e.g., email, phone, address)
         - Key skills (list of skills or competencies)
